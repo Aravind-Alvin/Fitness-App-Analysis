@@ -103,6 +103,7 @@ if page == "🏠 Overview":
     st.markdown('<p class="sub-title">How consumers use their smart devices — insights for Bellabeat marketing strategy</p>',
                 unsafe_allow_html=True)
     st.markdown("<style>[data-testid='stMetricLabel'] {color: #FF4B4B !important;}</style>", unsafe_allow_html=True)
+    st.markdown("<style>[data-testid='stMetricValue'] {color: #0066CC !important;}</style>", unsafe_allow_html=True)
 
     # -----------------------------------------------------------------------
     # KPI CARDS
