@@ -1,0 +1,14 @@
+[daily_activity] loaded 940 raw rows, 33 users
+[daily_activity] cleaned to 940 rows (77 zero-step days flagged, not dropped)
+[hourly_activity] merged calories+intensities+steps -> 22099 rows
+[daily_sleep] loaded 413 rows, dropped 3 exact duplicate rows
+[daily_sleep] cleaned to 410 rows, 24 users
+[weight_log] loaded 67 rows, 8 users (Fat recorded for only 2 rows -> column dropped)
+[user_summary] built summary for 33 users
+
+--- ROW COUNTS ---
+daily_activity: 940 rows
+hourly_activity: 22099 rows
+daily_sleep: 410 rows
+weight_log: 67 rows
+user_summary: 33 rows
