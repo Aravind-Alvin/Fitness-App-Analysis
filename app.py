@@ -102,7 +102,7 @@ if page == "🏠 Overview":
     st.markdown('<p class="main-title">STRAVA / Bellabeat Fitness Data Analytics</p>', unsafe_allow_html=True)
     st.markdown('<p class="sub-title">How consumers use their smart devices — insights for Bellabeat marketing strategy</p>',
                 unsafe_allow_html=True)
-    st.markdown("<style>[data-testid='stMetricLabel'] {color: #000000 !important; font-size: 18px !important; font-weight: 700 !important;}</style>", unsafe_allow_html=True)
+    st.markdown("<style>[data-testid='stMetricLabel'] {color: #000000 !important; font-size: 20px !important; font-weight: 700 !important;}</style>", unsafe_allow_html=True)
     st.markdown("<style>[data-testid='stMetricValue'] {color: #374c54 !important;}</style>", unsafe_allow_html=True)
 
     # -----------------------------------------------------------------------
