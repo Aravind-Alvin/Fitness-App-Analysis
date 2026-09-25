@@ -103,14 +103,135 @@ if page == "🏠 Overview":
     st.markdown('<p class="sub-title">How consumers use their smart devices — insights for Bellabeat marketing strategy</p>',
                 unsafe_allow_html=True)
     st.markdown("")
-
+    # -----------------------------------------------------------------------
+    # KPI CARDS
+    # -----------------------------------------------------------------------
     c1, c2, c3, c4, c5 = st.columns(5)
-    c1.metric("Users Tracked", f"{daily_activity['id'].nunique()}")
-    c2.metric("Days Covered", f"{(daily_activity['activity_date'].max() - daily_activity['activity_date'].min()).days + 1}")
-    c3.metric("Avg. Daily Steps", f"{daily_activity['total_steps'].mean():,.0f}")
-    c4.metric("Avg. Sedentary Hours/Day", f"{daily_activity['sedentary_minutes'].mean()/60:.1f}")
-    c5.metric("Avg. Sleep (hrs)", f"{daily_sleep['total_minutes_asleep'].mean()/60:.1f}")
+    
+c1.markdown(f"""
+    <div style="
+        background-color: #E8F4FF;
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+        border: 1px solid #B8DFFF;
+    ">
+        <div style="
+            color: #0066CC;
+            font-size: 16px;
+            font-weight: 600;
+        ">
+            Users Tracked
+        </div>
+        <div style="
+            color: #003366;
+            font-size: 28px;
+            font-weight: bold;
+        ">
+            {daily_activity['id'].nunique()}
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
 
+    c2.markdown(f"""
+    <div style="
+        background-color: #EAF7EA;
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+        border: 1px solid #B8E0B8;
+    ">
+        <div style="
+            color: #198754;
+            font-size: 16px;
+            font-weight: 600;
+        ">
+            Days Covered
+        </div>
+        <div style="
+            color: #146C43;
+            font-size: 28px;
+            font-weight: bold;
+        ">
+            {(daily_activity['activity_date'].max() - daily_activity['activity_date'].min()).days + 1}
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    c3.markdown(f"""
+    <div style="
+        background-color: #FFF4E5;
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+        border: 1px solid #FFD699;
+    ">
+        <div style="
+            color: #E67E00;
+            font-size: 16px;
+            font-weight: 600;
+        ">
+            Avg. Daily Steps
+        </div>
+        <div style="
+            color: #A65300;
+            font-size: 28px;
+            font-weight: bold;
+        ">
+            {daily_activity['total_steps'].mean():,.0f}
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    c4.markdown(f"""
+    <div style="
+        background-color: #FCE8F3;
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+        border: 1px solid #F3B6D2;
+    ">
+        <div style="
+            color: #C2185B;
+            font-size: 16px;
+            font-weight: 600;
+        ">
+            Avg. Sedentary Hours/Day
+        </div>
+        <div style="
+            color: #880E4F;
+            font-size: 28px;
+            font-weight: bold;
+        ">
+            {daily_activity['sedentary_minutes'].mean()/60:.1f}
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    c5.markdown(f"""
+    <div style="
+        background-color: #F0EAFE;
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+        border: 1px solid #D5C5F5;
+    ">
+        <div style="
+            color: #6F42C1;
+            font-size: 16px;
+            font-weight: 600;
+        ">
+            Avg. Sleep (hrs)
+        </div>
+        <div style="
+            color: #4B2A85;
+            font-size: 28px;
+            font-weight: bold;
+        ">
+            {daily_sleep['total_minutes_asleep'].mean()/60:.1f}
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
     st.markdown("---")
     col1, col2 = st.columns(2)
     with col1:
