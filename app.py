@@ -177,6 +177,25 @@ elif page == "🏃 Activity Analysis":
 # PAGE: SLEEP ANALYSIS
 # ---------------------------------------------------------------------------
 elif page == "😴 Sleep Analysis":
+    st.markdown("""
+    <style>
+    [data-testid="stMetric"] {
+        background-color: #E8F4FF !important;
+        padding: 15px !important;
+        border-radius: 12px !important;
+    }
+
+    [data-testid="stMetricLabel"] {
+        color: #0066CC !important;
+        font-weight: 700 !important;
+    }
+
+    [data-testid="stMetricValue"] {
+        color: #003366 !important;
+        font-weight: 700 !important;
+    }
+    </style>
+    """, unsafe_allow_html=True)
     st.header("😴 Sleep Analysis")
     st.caption(f"Showing {ds_f['id'].nunique()} user(s), {len(ds_f)} night-records "
                f"({user_summary['has_sleep_data'].sum()}/{len(user_summary)} users logged sleep at all)")
